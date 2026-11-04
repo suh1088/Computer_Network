@@ -1,0 +1,122 @@
+[2026-11-04 17:41:41.691] [main] [SERVER_STARTING] port=62266 workers=10 slowDown=50ms debug=true
+[2026-11-04 17:41:41.731] [main] [SERVER_LISTENING] Server listening on port 62266
+[2026-11-04 17:41:41.752] [main] [CONNECTION_ACCEPTED] port=62266 client=/127.0.0.1:62267
+[2026-11-04 17:41:41.754] [main] [CONNECTION_ACCEPTED] port=62266 client=/127.0.0.1:62268
+[2026-11-04 17:41:41.757] [main] [CONNECTION_ACCEPTED] port=62266 client=/127.0.0.1:62269
+[2026-11-04 17:41:41.757] [main] [CONNECTION_ACCEPTED] port=62266 client=/127.0.0.1:62270
+[2026-11-04 17:41:41.758] [main] [CONNECTION_ACCEPTED] port=62266 client=/127.0.0.1:62271
+[2026-11-04 17:41:41.760] [main] [CONNECTION_ACCEPTED] port=62266 client=/127.0.0.1:62272
+[2026-11-04 17:41:41.761] [pool-1-thread-4] [REQUEST_READING] port=62266 client=/127.0.0.1:62270 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.761] [pool-1-thread-3] [REQUEST_READING] port=62266 client=/127.0.0.1:62269 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.761] [pool-1-thread-2] [REQUEST_READING] port=62266 client=/127.0.0.1:62268 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.761] [pool-1-thread-1] [REQUEST_READING] port=62266 client=/127.0.0.1:62267 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.761] [pool-1-thread-5] [REQUEST_READING] port=62266 client=/127.0.0.1:62271 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.761] [main] [CONNECTION_ACCEPTED] port=62266 client=/127.0.0.1:62273
+[2026-11-04 17:41:41.761] [pool-1-thread-6] [REQUEST_READING] port=62266 client=/127.0.0.1:62272 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.761] [main] [CONNECTION_ACCEPTED] port=62266 client=/127.0.0.1:62274
+[2026-11-04 17:41:41.761] [pool-1-thread-7] [REQUEST_READING] port=62266 client=/127.0.0.1:62273 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.762] [main] [CONNECTION_ACCEPTED] port=62266 client=/127.0.0.1:62275
+[2026-11-04 17:41:41.762] [pool-1-thread-8] [REQUEST_READING] port=62266 client=/127.0.0.1:62274 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.762] [main] [CONNECTION_ACCEPTED] port=62266 client=/127.0.0.1:62276
+[2026-11-04 17:41:41.762] [pool-1-thread-9] [REQUEST_READING] port=62266 client=/127.0.0.1:62275 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.762] [pool-1-thread-10] [REQUEST_READING] port=62266 client=/127.0.0.1:62276 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.770] [pool-1-thread-2] [REQUEST_RECEIVED] port=62266 client=/127.0.0.1:62268 PUT /upload/shared.bin version=HTTP/1.1 contentLength=4096 contentType=null
+[2026-11-04 17:41:41.770] [pool-1-thread-6] [REQUEST_RECEIVED] port=62266 client=/127.0.0.1:62272 PUT /upload/shared.bin version=HTTP/1.1 contentLength=4096 contentType=null
+[2026-11-04 17:41:41.770] [pool-1-thread-5] [REQUEST_RECEIVED] port=62266 client=/127.0.0.1:62271 PUT /upload/shared.bin version=HTTP/1.1 contentLength=4096 contentType=null
+[2026-11-04 17:41:41.770] [pool-1-thread-7] [REQUEST_RECEIVED] port=62266 client=/127.0.0.1:62273 PUT /upload/shared.bin version=HTTP/1.1 contentLength=4096 contentType=null
+[2026-11-04 17:41:41.770] [pool-1-thread-9] [REQUEST_RECEIVED] port=62266 client=/127.0.0.1:62275 PUT /upload/shared.bin version=HTTP/1.1 contentLength=4096 contentType=null
+[2026-11-04 17:41:41.770] [pool-1-thread-4] [REQUEST_RECEIVED] port=62266 client=/127.0.0.1:62270 PUT /upload/shared.bin version=HTTP/1.1 contentLength=4096 contentType=null
+[2026-11-04 17:41:41.770] [pool-1-thread-10] [REQUEST_RECEIVED] port=62266 client=/127.0.0.1:62276 PUT /upload/shared.bin version=HTTP/1.1 contentLength=4096 contentType=null
+[2026-11-04 17:41:41.770] [pool-1-thread-8] [REQUEST_RECEIVED] port=62266 client=/127.0.0.1:62274 PUT /upload/shared.bin version=HTTP/1.1 contentLength=4096 contentType=null
+[2026-11-04 17:41:41.770] [pool-1-thread-3] [REQUEST_RECEIVED] port=62266 client=/127.0.0.1:62269 PUT /upload/shared.bin version=HTTP/1.1 contentLength=4096 contentType=null
+[2026-11-04 17:41:41.770] [pool-1-thread-1] [REQUEST_RECEIVED] port=62266 client=/127.0.0.1:62267 PUT /upload/shared.bin version=HTTP/1.1 contentLength=4096 contentType=null
+[2026-11-04 17:41:41.773] [pool-1-thread-9] [UPLOAD_WAIT] port=62266 client=/127.0.0.1:62275 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.773] [pool-1-thread-2] [UPLOAD_WAIT] port=62266 client=/127.0.0.1:62268 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.773] [pool-1-thread-1] [UPLOAD_WAIT] port=62266 client=/127.0.0.1:62267 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.773] [pool-1-thread-7] [UPLOAD_WAIT] port=62266 client=/127.0.0.1:62273 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.773] [pool-1-thread-8] [UPLOAD_WAIT] port=62266 client=/127.0.0.1:62274 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.773] [pool-1-thread-4] [UPLOAD_WAIT] port=62266 client=/127.0.0.1:62270 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.773] [pool-1-thread-10] [UPLOAD_WAIT] port=62266 client=/127.0.0.1:62276 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.773] [pool-1-thread-5] [UPLOAD_WAIT] port=62266 client=/127.0.0.1:62271 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.773] [pool-1-thread-6] [UPLOAD_WAIT] port=62266 client=/127.0.0.1:62272 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.773] [pool-1-thread-3] [UPLOAD_WAIT] port=62266 client=/127.0.0.1:62269 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+ENTER pool-1-thread-9 .\docs\upload\shared.bin
+[2026-11-04 17:41:41.774] [pool-1-thread-9] [WRITE_BEGIN] port=62266 client=/127.0.0.1:62275 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.776] [pool-1-thread-9] [WRITE_DELAY] port=62266 client=/127.0.0.1:62275 PUT /upload/shared.bin file=.\docs\upload\shared.bin delayMs=50
+[2026-11-04 17:41:41.829] [pool-1-thread-9] [FILE_CREATED] port=62266 client=/127.0.0.1:62275 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.830] [pool-1-thread-9] [WRITE_END] port=62266 client=/127.0.0.1:62275 PUT /upload/shared.bin file=.\docs\upload\shared.bin
+EXIT pool-1-thread-9 .\docs\upload\shared.bin
+ENTER pool-1-thread-2 .\docs\upload\shared.bin
+[2026-11-04 17:41:41.831] [pool-1-thread-2] [WRITE_BEGIN] port=62266 client=/127.0.0.1:62268 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.831] [pool-1-thread-9] [RESPONSE_SENT] port=62266 client=/127.0.0.1:62275 PUT /upload/shared.bin status=201 Created bytes=0
+[2026-11-04 17:41:41.831] [pool-1-thread-2] [WRITE_DELAY] port=62266 client=/127.0.0.1:62268 PUT /upload/shared.bin file=.\docs\upload\shared.bin delayMs=50
+[2026-11-04 17:41:41.832] [pool-1-thread-9] [CONNECTION_CLOSED] port=62266 client=/127.0.0.1:62275 PUT /upload/shared.bin durationMs=69
+[2026-11-04 17:41:41.882] [pool-1-thread-2] [FILE_UPDATED] port=62266 client=/127.0.0.1:62268 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.882] [pool-1-thread-2] [WRITE_END] port=62266 client=/127.0.0.1:62268 PUT /upload/shared.bin file=.\docs\upload\shared.bin
+EXIT pool-1-thread-2 .\docs\upload\shared.bin
+[2026-11-04 17:41:41.883] [pool-1-thread-2] [RESPONSE_SENT] port=62266 client=/127.0.0.1:62268 PUT /upload/shared.bin status=200 OK bytes=0
+[2026-11-04 17:41:41.883] [pool-1-thread-2] [CONNECTION_CLOSED] port=62266 client=/127.0.0.1:62268 PUT /upload/shared.bin durationMs=127
+ENTER pool-1-thread-1 .\docs\upload\shared.bin
+[2026-11-04 17:41:41.883] [pool-1-thread-1] [WRITE_BEGIN] port=62266 client=/127.0.0.1:62267 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.883] [pool-1-thread-1] [WRITE_DELAY] port=62266 client=/127.0.0.1:62267 PUT /upload/shared.bin file=.\docs\upload\shared.bin delayMs=50
+[2026-11-04 17:41:41.935] [pool-1-thread-1] [FILE_UPDATED] port=62266 client=/127.0.0.1:62267 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.935] [pool-1-thread-1] [WRITE_END] port=62266 client=/127.0.0.1:62267 PUT /upload/shared.bin file=.\docs\upload\shared.bin
+EXIT pool-1-thread-1 .\docs\upload\shared.bin
+[2026-11-04 17:41:41.936] [pool-1-thread-1] [RESPONSE_SENT] port=62266 client=/127.0.0.1:62267 PUT /upload/shared.bin status=200 OK bytes=0
+[2026-11-04 17:41:41.936] [pool-1-thread-1] [CONNECTION_CLOSED] port=62266 client=/127.0.0.1:62267 PUT /upload/shared.bin durationMs=179
+ENTER pool-1-thread-7 .\docs\upload\shared.bin
+[2026-11-04 17:41:41.936] [pool-1-thread-7] [WRITE_BEGIN] port=62266 client=/127.0.0.1:62273 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.936] [pool-1-thread-7] [WRITE_DELAY] port=62266 client=/127.0.0.1:62273 PUT /upload/shared.bin file=.\docs\upload\shared.bin delayMs=50
+[2026-11-04 17:41:41.987] [pool-1-thread-7] [FILE_UPDATED] port=62266 client=/127.0.0.1:62273 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.987] [pool-1-thread-7] [WRITE_END] port=62266 client=/127.0.0.1:62273 PUT /upload/shared.bin file=.\docs\upload\shared.bin
+EXIT pool-1-thread-7 .\docs\upload\shared.bin
+[2026-11-04 17:41:41.988] [pool-1-thread-7] [RESPONSE_SENT] port=62266 client=/127.0.0.1:62273 PUT /upload/shared.bin status=200 OK bytes=0
+ENTER pool-1-thread-8 .\docs\upload\shared.bin
+[2026-11-04 17:41:41.988] [pool-1-thread-7] [CONNECTION_CLOSED] port=62266 client=/127.0.0.1:62273 PUT /upload/shared.bin durationMs=226
+[2026-11-04 17:41:41.988] [pool-1-thread-8] [WRITE_BEGIN] port=62266 client=/127.0.0.1:62274 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:41.988] [pool-1-thread-8] [WRITE_DELAY] port=62266 client=/127.0.0.1:62274 PUT /upload/shared.bin file=.\docs\upload\shared.bin delayMs=50
+[2026-11-04 17:41:42.039] [pool-1-thread-8] [FILE_UPDATED] port=62266 client=/127.0.0.1:62274 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.039] [pool-1-thread-8] [WRITE_END] port=62266 client=/127.0.0.1:62274 PUT /upload/shared.bin file=.\docs\upload\shared.bin
+EXIT pool-1-thread-8 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.040] [pool-1-thread-8] [RESPONSE_SENT] port=62266 client=/127.0.0.1:62274 PUT /upload/shared.bin status=200 OK bytes=0
+[2026-11-04 17:41:42.040] [pool-1-thread-8] [CONNECTION_CLOSED] port=62266 client=/127.0.0.1:62274 PUT /upload/shared.bin durationMs=278
+ENTER pool-1-thread-4 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.040] [pool-1-thread-4] [WRITE_BEGIN] port=62266 client=/127.0.0.1:62270 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.040] [pool-1-thread-4] [WRITE_DELAY] port=62266 client=/127.0.0.1:62270 PUT /upload/shared.bin file=.\docs\upload\shared.bin delayMs=50
+[2026-11-04 17:41:42.091] [pool-1-thread-4] [FILE_UPDATED] port=62266 client=/127.0.0.1:62270 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.091] [pool-1-thread-4] [WRITE_END] port=62266 client=/127.0.0.1:62270 PUT /upload/shared.bin file=.\docs\upload\shared.bin
+EXIT pool-1-thread-4 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.092] [pool-1-thread-4] [RESPONSE_SENT] port=62266 client=/127.0.0.1:62270 PUT /upload/shared.bin status=200 OK bytes=0
+[2026-11-04 17:41:42.092] [pool-1-thread-4] [CONNECTION_CLOSED] port=62266 client=/127.0.0.1:62270 PUT /upload/shared.bin durationMs=332
+ENTER pool-1-thread-10 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.092] [pool-1-thread-10] [WRITE_BEGIN] port=62266 client=/127.0.0.1:62276 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.092] [pool-1-thread-10] [WRITE_DELAY] port=62266 client=/127.0.0.1:62276 PUT /upload/shared.bin file=.\docs\upload\shared.bin delayMs=50
+[2026-11-04 17:41:42.143] [pool-1-thread-10] [FILE_UPDATED] port=62266 client=/127.0.0.1:62276 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.143] [pool-1-thread-10] [WRITE_END] port=62266 client=/127.0.0.1:62276 PUT /upload/shared.bin file=.\docs\upload\shared.bin
+EXIT pool-1-thread-10 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.144] [pool-1-thread-10] [RESPONSE_SENT] port=62266 client=/127.0.0.1:62276 PUT /upload/shared.bin status=200 OK bytes=0
+ENTER pool-1-thread-5 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.144] [pool-1-thread-10] [CONNECTION_CLOSED] port=62266 client=/127.0.0.1:62276 PUT /upload/shared.bin durationMs=381
+[2026-11-04 17:41:42.144] [pool-1-thread-5] [WRITE_BEGIN] port=62266 client=/127.0.0.1:62271 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.144] [pool-1-thread-5] [WRITE_DELAY] port=62266 client=/127.0.0.1:62271 PUT /upload/shared.bin file=.\docs\upload\shared.bin delayMs=50
+[2026-11-04 17:41:42.196] [pool-1-thread-5] [FILE_UPDATED] port=62266 client=/127.0.0.1:62271 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.197] [pool-1-thread-5] [WRITE_END] port=62266 client=/127.0.0.1:62271 PUT /upload/shared.bin file=.\docs\upload\shared.bin
+EXIT pool-1-thread-5 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.197] [pool-1-thread-5] [RESPONSE_SENT] port=62266 client=/127.0.0.1:62271 PUT /upload/shared.bin status=200 OK bytes=0
+[2026-11-04 17:41:42.197] [pool-1-thread-5] [CONNECTION_CLOSED] port=62266 client=/127.0.0.1:62271 PUT /upload/shared.bin durationMs=437
+ENTER pool-1-thread-6 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.197] [pool-1-thread-6] [WRITE_BEGIN] port=62266 client=/127.0.0.1:62272 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.197] [pool-1-thread-6] [WRITE_DELAY] port=62266 client=/127.0.0.1:62272 PUT /upload/shared.bin file=.\docs\upload\shared.bin delayMs=50
+[2026-11-04 17:41:42.248] [pool-1-thread-6] [FILE_UPDATED] port=62266 client=/127.0.0.1:62272 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.248] [pool-1-thread-6] [WRITE_END] port=62266 client=/127.0.0.1:62272 PUT /upload/shared.bin file=.\docs\upload\shared.bin
+EXIT pool-1-thread-6 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.249] [pool-1-thread-6] [RESPONSE_SENT] port=62266 client=/127.0.0.1:62272 PUT /upload/shared.bin status=200 OK bytes=0
+[2026-11-04 17:41:42.249] [pool-1-thread-6] [CONNECTION_CLOSED] port=62266 client=/127.0.0.1:62272 PUT /upload/shared.bin durationMs=487
+ENTER pool-1-thread-3 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.249] [pool-1-thread-3] [WRITE_BEGIN] port=62266 client=/127.0.0.1:62269 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.249] [pool-1-thread-3] [WRITE_DELAY] port=62266 client=/127.0.0.1:62269 PUT /upload/shared.bin file=.\docs\upload\shared.bin delayMs=50
+[2026-11-04 17:41:42.300] [pool-1-thread-3] [FILE_UPDATED] port=62266 client=/127.0.0.1:62269 PUT /upload/shared.bin file=.\docs\upload\shared.bin bytes=4096
+[2026-11-04 17:41:42.300] [pool-1-thread-3] [WRITE_END] port=62266 client=/127.0.0.1:62269 PUT /upload/shared.bin file=.\docs\upload\shared.bin
+EXIT pool-1-thread-3 .\docs\upload\shared.bin
+[2026-11-04 17:41:42.300] [pool-1-thread-3] [RESPONSE_SENT] port=62266 client=/127.0.0.1:62269 PUT /upload/shared.bin status=200 OK bytes=0
+[2026-11-04 17:41:42.301] [pool-1-thread-3] [CONNECTION_CLOSED] port=62266 client=/127.0.0.1:62269 PUT /upload/shared.bin durationMs=543

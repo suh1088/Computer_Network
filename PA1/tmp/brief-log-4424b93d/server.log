@@ -1,0 +1,8 @@
+Server listening on port 62372
+GET /index.html -> 200 OK
+PUT /upload/sample.bin -> 201 Created
+PUT /upload/sample.bin -> 200 OK
+POST /upload -> 201 Created
+POST /upload -> 400 Bad Request
+GET /missing -> 404 Not Found
+DELETE /index.html -> 405 Method Not Allowed

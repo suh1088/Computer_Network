@@ -1,0 +1,78 @@
+[2026-11-04 17:41:41.265] [main] [SERVER_STARTING] port=62255 workers=10 slowDown=0ms debug=false
+[2026-11-04 17:41:41.285] [main] [SERVER_LISTENING] Server listening on port 62255
+[2026-11-04 17:41:41.305] [main] [CONNECTION_ACCEPTED] port=62255 client=/127.0.0.1:62256
+[2026-11-04 17:41:41.310] [pool-1-thread-1] [REQUEST_READING] port=62255 client=/127.0.0.1:62256 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.317] [pool-1-thread-1] [REQUEST_RECEIVED] port=62255 client=/127.0.0.1:62256 GET /index.html version=HTTP/1.1 contentLength=null contentType=null
+[2026-11-04 17:41:41.319] [pool-1-thread-1] [FILE_LOOKUP] port=62255 client=/127.0.0.1:62256 GET /index.html file=.\docs\public\index.html
+[2026-11-04 17:41:41.321] [pool-1-thread-1] [FILE_READ] port=62255 client=/127.0.0.1:62256 GET /index.html file=.\docs\public\index.html bytes=5
+[2026-11-04 17:41:41.327] [pool-1-thread-1] [RESPONSE_SENT] port=62255 client=/127.0.0.1:62256 GET /index.html status=200 OK bytes=5
+[2026-11-04 17:41:41.328] [main] [CONNECTION_ACCEPTED] port=62255 client=/127.0.0.1:62257
+[2026-11-04 17:41:41.328] [pool-1-thread-2] [REQUEST_READING] port=62255 client=/127.0.0.1:62257 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.329] [pool-1-thread-1] [CONNECTION_CLOSED] port=62255 client=/127.0.0.1:62256 GET /index.html durationMs=21
+[2026-11-04 17:41:41.342] [pool-1-thread-2] [REQUEST_RECEIVED] port=62255 client=/127.0.0.1:62257 GET /missing version=HTTP/1.1 contentLength=null contentType=null
+[2026-11-04 17:41:41.343] [pool-1-thread-2] [FILE_LOOKUP] port=62255 client=/127.0.0.1:62257 GET /missing file=.\docs\public\missing
+[2026-11-04 17:41:41.343] [pool-1-thread-2] [FILE_NOT_FOUND] port=62255 client=/127.0.0.1:62257 GET /missing file=.\docs\public\missing
+[2026-11-04 17:41:41.343] [pool-1-thread-2] [RESPONSE_SENT] port=62255 client=/127.0.0.1:62257 GET /missing status=404 Not Found bytes=0
+[2026-11-04 17:41:41.343] [pool-1-thread-2] [CONNECTION_CLOSED] port=62255 client=/127.0.0.1:62257 GET /missing durationMs=15
+[2026-11-04 17:41:41.344] [main] [CONNECTION_ACCEPTED] port=62255 client=/127.0.0.1:62258
+[2026-11-04 17:41:41.344] [pool-1-thread-3] [REQUEST_READING] port=62255 client=/127.0.0.1:62258 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.358] [pool-1-thread-3] [REQUEST_RECEIVED] port=62255 client=/127.0.0.1:62258 DELETE /index.html version=HTTP/1.1 contentLength=null contentType=null
+[2026-11-04 17:41:41.358] [pool-1-thread-3] [METHOD_REJECTED] port=62255 client=/127.0.0.1:62258 DELETE /index.html Unsupported method
+[2026-11-04 17:41:41.359] [pool-1-thread-3] [RESPONSE_SENT] port=62255 client=/127.0.0.1:62258 DELETE /index.html status=405 Method Not Allowed bytes=0
+[2026-11-04 17:41:41.359] [pool-1-thread-3] [CONNECTION_CLOSED] port=62255 client=/127.0.0.1:62258 DELETE /index.html durationMs=14
+[2026-11-04 17:41:41.359] [main] [CONNECTION_ACCEPTED] port=62255 client=/127.0.0.1:62259
+[2026-11-04 17:41:41.359] [pool-1-thread-4] [REQUEST_READING] port=62255 client=/127.0.0.1:62259 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.375] [pool-1-thread-4] [REQUEST_RECEIVED] port=62255 client=/127.0.0.1:62259 PUT /upload/test.bin version=HTTP/1.1 contentLength=3 contentType=null
+[2026-11-04 17:41:41.375] [pool-1-thread-4] [UPLOAD_WAIT] port=62255 client=/127.0.0.1:62259 PUT /upload/test.bin file=.\docs\upload\test.bin bytes=3
+[2026-11-04 17:41:41.376] [pool-1-thread-4] [WRITE_BEGIN] port=62255 client=/127.0.0.1:62259 PUT /upload/test.bin file=.\docs\upload\test.bin bytes=3
+[2026-11-04 17:41:41.377] [pool-1-thread-4] [FILE_CREATED] port=62255 client=/127.0.0.1:62259 PUT /upload/test.bin file=.\docs\upload\test.bin bytes=3
+[2026-11-04 17:41:41.377] [pool-1-thread-4] [WRITE_END] port=62255 client=/127.0.0.1:62259 PUT /upload/test.bin file=.\docs\upload\test.bin
+[2026-11-04 17:41:41.377] [pool-1-thread-4] [RESPONSE_SENT] port=62255 client=/127.0.0.1:62259 PUT /upload/test.bin status=201 Created bytes=0
+[2026-11-04 17:41:41.378] [pool-1-thread-4] [CONNECTION_CLOSED] port=62255 client=/127.0.0.1:62259 PUT /upload/test.bin durationMs=18
+[2026-11-04 17:41:41.378] [main] [CONNECTION_ACCEPTED] port=62255 client=/127.0.0.1:62260
+[2026-11-04 17:41:41.378] [pool-1-thread-5] [REQUEST_READING] port=62255 client=/127.0.0.1:62260 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.390] [pool-1-thread-5] [REQUEST_RECEIVED] port=62255 client=/127.0.0.1:62260 PUT /upload/test.bin version=HTTP/1.1 contentLength=3 contentType=null
+[2026-11-04 17:41:41.391] [pool-1-thread-5] [UPLOAD_WAIT] port=62255 client=/127.0.0.1:62260 PUT /upload/test.bin file=.\docs\upload\test.bin bytes=3
+[2026-11-04 17:41:41.391] [pool-1-thread-5] [WRITE_BEGIN] port=62255 client=/127.0.0.1:62260 PUT /upload/test.bin file=.\docs\upload\test.bin bytes=3
+[2026-11-04 17:41:41.392] [pool-1-thread-5] [FILE_UPDATED] port=62255 client=/127.0.0.1:62260 PUT /upload/test.bin file=.\docs\upload\test.bin bytes=3
+[2026-11-04 17:41:41.392] [pool-1-thread-5] [WRITE_END] port=62255 client=/127.0.0.1:62260 PUT /upload/test.bin file=.\docs\upload\test.bin
+[2026-11-04 17:41:41.392] [pool-1-thread-5] [RESPONSE_SENT] port=62255 client=/127.0.0.1:62260 PUT /upload/test.bin status=200 OK bytes=0
+[2026-11-04 17:41:41.392] [pool-1-thread-5] [CONNECTION_CLOSED] port=62255 client=/127.0.0.1:62260 PUT /upload/test.bin durationMs=14
+[2026-11-04 17:41:41.393] [main] [CONNECTION_ACCEPTED] port=62255 client=/127.0.0.1:62261
+[2026-11-04 17:41:41.393] [pool-1-thread-6] [REQUEST_READING] port=62255 client=/127.0.0.1:62261 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.407] [pool-1-thread-6] [REQUEST_RECEIVED] port=62255 client=/127.0.0.1:62261 POST /upload version=HTTP/1.1 contentLength=84 contentType=multipart/form-data; boundary=B
+[2026-11-04 17:41:41.409] [pool-1-thread-6] [MULTIPART_FILE] port=62255 client=/127.0.0.1:62261 POST /upload filename=post.bin bytes=2
+[2026-11-04 17:41:41.409] [pool-1-thread-6] [UPLOAD_WAIT] port=62255 client=/127.0.0.1:62261 POST /upload file=.\docs\upload\post.bin bytes=2
+[2026-11-04 17:41:41.409] [pool-1-thread-6] [WRITE_BEGIN] port=62255 client=/127.0.0.1:62261 POST /upload file=.\docs\upload\post.bin bytes=2
+[2026-11-04 17:41:41.410] [pool-1-thread-6] [FILE_CREATED] port=62255 client=/127.0.0.1:62261 POST /upload file=.\docs\upload\post.bin bytes=2
+[2026-11-04 17:41:41.410] [pool-1-thread-6] [WRITE_END] port=62255 client=/127.0.0.1:62261 POST /upload file=.\docs\upload\post.bin
+[2026-11-04 17:41:41.410] [pool-1-thread-6] [RESPONSE_SENT] port=62255 client=/127.0.0.1:62261 POST /upload status=201 Created bytes=0
+[2026-11-04 17:41:41.410] [pool-1-thread-6] [CONNECTION_CLOSED] port=62255 client=/127.0.0.1:62261 POST /upload durationMs=17
+[2026-11-04 17:41:41.411] [main] [CONNECTION_ACCEPTED] port=62255 client=/127.0.0.1:62262
+[2026-11-04 17:41:41.411] [pool-1-thread-7] [REQUEST_READING] port=62255 client=/127.0.0.1:62262 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.422] [pool-1-thread-7] [REQUEST_RECEIVED] port=62255 client=/127.0.0.1:62262 POST /upload version=HTTP/1.1 contentLength=84 contentType=multipart/form-data; boundary=B
+[2026-11-04 17:41:41.422] [pool-1-thread-7] [MULTIPART_FILE] port=62255 client=/127.0.0.1:62262 POST /upload filename=post.bin bytes=2
+[2026-11-04 17:41:41.423] [pool-1-thread-7] [UPLOAD_WAIT] port=62255 client=/127.0.0.1:62262 POST /upload file=.\docs\upload\post.bin bytes=2
+[2026-11-04 17:41:41.423] [pool-1-thread-7] [WRITE_BEGIN] port=62255 client=/127.0.0.1:62262 POST /upload file=.\docs\upload\post.bin bytes=2
+[2026-11-04 17:41:41.423] [pool-1-thread-7] [FILE_UPDATED] port=62255 client=/127.0.0.1:62262 POST /upload file=.\docs\upload\post.bin bytes=2
+[2026-11-04 17:41:41.423] [pool-1-thread-7] [WRITE_END] port=62255 client=/127.0.0.1:62262 POST /upload file=.\docs\upload\post.bin
+[2026-11-04 17:41:41.424] [pool-1-thread-7] [RESPONSE_SENT] port=62255 client=/127.0.0.1:62262 POST /upload status=201 Created bytes=0
+[2026-11-04 17:41:41.424] [pool-1-thread-7] [CONNECTION_CLOSED] port=62255 client=/127.0.0.1:62262 POST /upload durationMs=12
+[2026-11-04 17:41:41.424] [main] [CONNECTION_ACCEPTED] port=62255 client=/127.0.0.1:62263
+[2026-11-04 17:41:41.425] [pool-1-thread-8] [REQUEST_READING] port=62255 client=/127.0.0.1:62263 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.437] [pool-1-thread-8] [REQUEST_RECEIVED] port=62255 client=/127.0.0.1:62263 POST /upload version=HTTP/1.1 contentLength=84 contentType=multipart/form-data
+[2026-11-04 17:41:41.437] [pool-1-thread-8] [MULTIPART_REJECTED] port=62255 client=/127.0.0.1:62263 POST /upload Missing or empty boundary
+[2026-11-04 17:41:41.438] [pool-1-thread-8] [RESPONSE_SENT] port=62255 client=/127.0.0.1:62263 POST /upload status=400 Bad Request bytes=0
+[2026-11-04 17:41:41.438] [pool-1-thread-8] [CONNECTION_CLOSED] port=62255 client=/127.0.0.1:62263 POST /upload durationMs=12
+[2026-11-04 17:41:41.438] [main] [CONNECTION_ACCEPTED] port=62255 client=/127.0.0.1:62264
+[2026-11-04 17:41:41.439] [pool-1-thread-9] [REQUEST_READING] port=62255 client=/127.0.0.1:62264 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.453] [pool-1-thread-9] [REQUEST_RECEIVED] port=62255 client=/127.0.0.1:62264 POST /upload version=HTTP/1.1 contentLength=79 contentType=multipart/form-data; boundary=B
+[2026-11-04 17:41:41.453] [pool-1-thread-9] [MULTIPART_REJECTED] port=62255 client=/127.0.0.1:62264 POST /upload Opening boundary missing or not followed by CRLF
+[2026-11-04 17:41:41.454] [pool-1-thread-9] [RESPONSE_SENT] port=62255 client=/127.0.0.1:62264 POST /upload status=400 Bad Request bytes=0
+[2026-11-04 17:41:41.454] [pool-1-thread-9] [CONNECTION_CLOSED] port=62255 client=/127.0.0.1:62264 POST /upload durationMs=15
+[2026-11-04 17:41:41.454] [main] [CONNECTION_ACCEPTED] port=62255 client=/127.0.0.1:62265
+[2026-11-04 17:41:41.455] [pool-1-thread-10] [REQUEST_READING] port=62255 client=/127.0.0.1:62265 request=unparsed Reading HTTP request
+[2026-11-04 17:41:41.455] [pool-1-thread-10] [REQUEST_RECEIVED] port=62255 client=/127.0.0.1:62265 POST /upload version=HTTP/1.1 contentLength=85 contentType=multipart/form-data; boundary=B
+[2026-11-04 17:41:41.455] [pool-1-thread-10] [MULTIPART_REJECTED] port=62255 client=/127.0.0.1:62265 POST /upload Missing part with name="file"
+[2026-11-04 17:41:41.455] [pool-1-thread-10] [RESPONSE_SENT] port=62255 client=/127.0.0.1:62265 POST /upload status=400 Bad Request bytes=0
+[2026-11-04 17:41:41.455] [pool-1-thread-10] [CONNECTION_CLOSED] port=62255 client=/127.0.0.1:62265 POST /upload durationMs=0

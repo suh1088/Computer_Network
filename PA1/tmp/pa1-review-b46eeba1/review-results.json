@@ -1,0 +1,200 @@
+{
+  "workspace": "C:\\Users\\splab\\suhyun\\network\\Computer_Network\\PA1\\tmp\\pa1-review-b46eeba1",
+  "results": [
+    {
+      "test": "GET /index.html",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/html",
+          "Content-Length": "26",
+          "Connection": "close"
+        }
+      }
+    },
+    {
+      "test": "GET /filename=index.html",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/html",
+          "Content-Length": "26",
+          "Connection": "close"
+        }
+      }
+    },
+    {
+      "test": "404 missing resource",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "405 unsupported method",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "400 malformed request",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "400 invalid Content-Length b'-1'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "400 invalid Content-Length b'x'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "400 incomplete body",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "PUT new binary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "PUT overwrite",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "POST binary preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "POST quoted boundary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "POST missing file part -> 400",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "POST missing closing boundary -> 400",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "10 concurrent PUT requests + synchronized logs",
+      "pass": true,
+      "detail": {
+        "statuses": [
+          201,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "elapsed_seconds": 5.03,
+        "log_lines": [
+          "ENTER pool-1-thread-6 .\\docs\\upload\\shared.bin",
+          "EXIT pool-1-thread-6 .\\docs\\upload\\shared.bin",
+          "ENTER pool-1-thread-7 .\\docs\\upload\\shared.bin",
+          "EXIT pool-1-thread-7 .\\docs\\upload\\shared.bin",
+          "ENTER pool-1-thread-8 .\\docs\\upload\\shared.bin",
+          "EXIT pool-1-thread-8 .\\docs\\upload\\shared.bin",
+          "ENTER pool-1-thread-9 .\\docs\\upload\\shared.bin",
+          "EXIT pool-1-thread-9 .\\docs\\upload\\shared.bin",
+          "ENTER pool-1-thread-10 .\\docs\\upload\\shared.bin",
+          "EXIT pool-1-thread-10 .\\docs\\upload\\shared.bin",
+          "ENTER pool-1-thread-1 .\\docs\\upload\\shared.bin",
+          "EXIT pool-1-thread-1 .\\docs\\upload\\shared.bin",
+          "ENTER pool-1-thread-2 .\\docs\\upload\\shared.bin",
+          "EXIT pool-1-thread-2 .\\docs\\upload\\shared.bin",
+          "ENTER pool-1-thread-3 .\\docs\\upload\\shared.bin",
+          "EXIT pool-1-thread-3 .\\docs\\upload\\shared.bin",
+          "ENTER pool-1-thread-4 .\\docs\\upload\\shared.bin",
+          "EXIT pool-1-thread-4 .\\docs\\upload\\shared.bin",
+          "ENTER pool-1-thread-5 .\\docs\\upload\\shared.bin",
+          "EXIT pool-1-thread-5 .\\docs\\upload\\shared.bin"
+        ]
+      }
+    },
+    {
+      "test": "PUT/POST shared write lock",
+      "pass": true,
+      "detail": [
+        200,
+        201,
+        201,
+        201
+      ]
+    },
+    {
+      "test": "GET must stay inside document root",
+      "pass": false,
+      "detail": {
+        "status": 200,
+        "body": "OUTSIDE_DOCUMENT_ROOT"
+      }
+    },
+    {
+      "test": "PUT missing filename returns HTTP error",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "test": "Reject invalid HTTP version",
+      "pass": false,
+      "detail": "HTTP/1.1 200 OK"
+    }
+  ],
+  "server_logs": [
+    "Server listening on port 61888",
+    "ENTER pool-1-thread-10 .\\docs\\upload\\put.bin",
+    "EXIT pool-1-thread-10 .\\docs\\upload\\put.bin",
+    "ENTER pool-1-thread-1 .\\docs\\upload\\put.bin",
+    "EXIT pool-1-thread-1 .\\docs\\upload\\put.bin",
+    "ENTER pool-1-thread-2 .\\docs\\upload\\post.bin",
+    "EXIT pool-1-thread-2 .\\docs\\upload\\post.bin",
+    "ENTER pool-1-thread-3 .\\docs\\upload\\quoted.bin",
+    "EXIT pool-1-thread-3 .\\docs\\upload\\quoted.bin",
+    "ENTER pool-1-thread-6 .\\docs\\upload\\shared.bin",
+    "EXIT pool-1-thread-6 .\\docs\\upload\\shared.bin",
+    "ENTER pool-1-thread-7 .\\docs\\upload\\shared.bin",
+    "EXIT pool-1-thread-7 .\\docs\\upload\\shared.bin",
+    "ENTER pool-1-thread-8 .\\docs\\upload\\shared.bin",
+    "EXIT pool-1-thread-8 .\\docs\\upload\\shared.bin",
+    "ENTER pool-1-thread-9 .\\docs\\upload\\shared.bin",
+    "EXIT pool-1-thread-9 .\\docs\\upload\\shared.bin",
+    "ENTER pool-1-thread-10 .\\docs\\upload\\shared.bin",
+    "EXIT pool-1-thread-10 .\\docs\\upload\\shared.bin",
+    "ENTER pool-1-thread-1 .\\docs\\upload\\shared.bin",
+    "EXIT pool-1-thread-1 .\\docs\\upload\\shared.bin",
+    "ENTER pool-1-thread-2 .\\docs\\upload\\shared.bin",
+    "EXIT pool-1-thread-2 .\\docs\\upload\\shared.bin",
+    "ENTER pool-1-thread-3 .\\docs\\upload\\shared.bin",
+    "EXIT pool-1-thread-3 .\\docs\\upload\\shared.bin",
+    "ENTER pool-1-thread-4 .\\docs\\upload\\shared.bin",
+    "EXIT pool-1-thread-4 .\\docs\\upload\\shared.bin",
+    "ENTER pool-1-thread-5 .\\docs\\upload\\shared.bin",
+    "EXIT pool-1-thread-5 .\\docs\\upload\\shared.bin",
+    "ENTER pool-1-thread-8 .\\docs\\upload\\mixed.bin",
+    "EXIT pool-1-thread-8 .\\docs\\upload\\mixed.bin",
+    "ENTER pool-1-thread-7 .\\docs\\upload\\mixed.bin",
+    "EXIT pool-1-thread-7 .\\docs\\upload\\mixed.bin",
+    "ENTER pool-1-thread-6 .\\docs\\upload\\mixed.bin",
+    "EXIT pool-1-thread-6 .\\docs\\upload\\mixed.bin",
+    "ENTER pool-1-thread-9 .\\docs\\upload\\mixed.bin",
+    "EXIT pool-1-thread-9 .\\docs\\upload\\mixed.bin",
+    "ENTER pool-1-thread-1 .\\docs\\upload",
+    "EXIT pool-1-thread-1 .\\docs\\upload",
+    ".\\docs\\upload"
+  ]
+}

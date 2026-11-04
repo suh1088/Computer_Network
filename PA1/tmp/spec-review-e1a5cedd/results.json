@@ -1,0 +1,5 @@
+{
+  "outside document root": "HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\nContent-Length: 21\r\nConnection: close\r\n\r\noutside document root",
+  "empty PUT filename": "",
+  "invalid HTTP version": "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\nContent-Length: 5\r\nConnection: close\r\n\r\nhello"
+}

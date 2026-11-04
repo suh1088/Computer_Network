@@ -25,7 +25,7 @@ public class MyWebServer {
                 throw new IllegalArgumentException("Invalid option value");
             }
         } catch (IllegalArgumentException | ArrayIndexOutOfBoundsException e) {
-            System.err.println("Usage: java MyWebServer --port 8080 [--slowDown milliseconds]");
+            System.out.println("[INVALID_OPTIONS] " + "Usage: java MyWebServer --port 8080 [--slowDown milliseconds]");
             return;
         }
 
@@ -38,7 +38,7 @@ public class MyWebServer {
                 threadPool.execute(new ClientHandler(clientSocket, slowDown, debug));
             }
         } catch (IOException e) {
-            System.err.println("Server error: " + e.getMessage());
+            System.out.println("[SERVER_ERROR] " + e.toString());
         } finally {
             threadPool.shutdown();
         }

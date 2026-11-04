@@ -15,6 +15,7 @@ public class ClientHandler implements Runnable{
     private final Socket clientSocket;
     private final long slowDown;
     private final boolean debug;
+    private String requestInfo = "Invalid request";
 
     // 처리할 클라이언트 소켓 저장
     public ClientHandler(Socket clientSocket) {
@@ -42,6 +43,7 @@ public class ClientHandler implements Runnable{
                 return;
             }
 
+            requestInfo = request.getMethod() + " " + request.getPath();
             try {
                 switch (request.getMethod()) {
                     case "GET":
@@ -63,8 +65,7 @@ public class ClientHandler implements Runnable{
                 sendStatus("400 Bad Request");
             }
         } catch (IOException e) {
-            // 통신 오류
-            System.err.println(e.getMessage());
+            System.out.println(requestInfo + " -> 처리 또는 응답 전송 실패: " + e.getMessage());
         }
     }
 
@@ -94,6 +95,7 @@ public class ClientHandler implements Runnable{
         output.write(header.getBytes(StandardCharsets.ISO_8859_1));
         output.write(body);
         output.flush();
+        System.out.println(requestInfo + " -> 200 OK");
     }
 
     private void handlePut(HttpRequest request) throws IOException {
@@ -120,6 +122,7 @@ public class ClientHandler implements Runnable{
         OutputStream output = clientSocket.getOutputStream();
         output.write(header.getBytes(StandardCharsets.ISO_8859_1));
         output.flush();
+        System.out.println(requestInfo + " -> " + status);
     }
 
     private void handlePost(HttpRequest request) throws IOException {
@@ -249,13 +252,16 @@ public class ClientHandler implements Runnable{
         OutputStream output = clientSocket.getOutputStream();
         output.write(header.getBytes(StandardCharsets.ISO_8859_1));
         output.flush();
+        System.out.println(requestInfo + " -> " + status);
     }
 
     private void writeUpload(Path file, byte[] data) throws IOException {
         String worker = Thread.currentThread().getName();
         if (debug) System.out.println("ENTER " + worker + " " + file);
         try {
-            if (slowDown > 0) Thread.sleep(slowDown);
+            if (slowDown > 0) {
+                Thread.sleep(slowDown);
+            }
             Files.write(file, data);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
@@ -271,5 +277,6 @@ public class ClientHandler implements Runnable{
                 + "Content-Length: 0\r\nConnection: close\r\n\r\n";
         clientSocket.getOutputStream().write(header.getBytes(StandardCharsets.ISO_8859_1));
         clientSocket.getOutputStream().flush();
+        System.out.println(requestInfo + " -> " + status);
     }
 }

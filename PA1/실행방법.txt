@@ -1,0 +1,72 @@
+PA1 웹 서버 실행 방법 (Windows PowerShell 기준)
+
+1. 준비
+- JDK 11 이상이 필요합니다. java와 javac 명령을 사용할 수 있어야 합니다.
+- 설치 확인:
+  java -version
+  javac -version
+- 아래 명령은 프로젝트 루트(PA1)에서 실행합니다.
+  cd "C:\Users\splab\suhyun\network\Computer_Network\PA1"
+- 서버가 ./docs/public과 ./docs/upload를 상대 경로로 사용하므로,
+  반드시 PA1 폴더를 현재 작업 디렉터리로 두고 실행해야 합니다.
+
+2. 컴파일
+  New-Item -ItemType Directory -Path out -Force | Out-Null
+  javac -encoding UTF-8 -d out src/MyWebServer.java src/http/HttpParser.java src/http/HttpRequest.java src/webserver/ClientHandler.java
+
+- 컴파일된 .class 파일은 out 폴더에 저장됩니다.
+- 소스 코드를 수정한 뒤에는 다시 컴파일합니다.
+
+3. 서버 실행
+  java -cp out MyWebServer --port 8080
+
+- 정상 실행 시 "Server listening on port 8080"이 출력됩니다.
+- 옵션을 생략하면 기본 포트 8080으로 실행됩니다.
+- 요청 처리 결과는 "POST /upload -> 201 Created"처럼 한 줄로 출력됩니다.
+- 오류 응답도 "GET /missing -> 404 Not Found"처럼 출력됩니다.
+- 다른 포트를 사용하려면 다음과 같이 실행합니다.
+  java -cp out MyWebServer --port 9090
+- 포트 번호는 1~65535 범위여야 합니다.
+
+4. 접속 확인 (GET)
+- 서버를 실행한 상태에서 브라우저로 다음 주소에 접속합니다.
+  http://localhost:8080/index.html
+- "Hello Web Server"가 표시되면 정상입니다.
+- PowerShell에서는 별도 터미널에서 다음 명령으로 확인할 수 있습니다.
+  curl.exe -i http://localhost:8080/index.html
+- GET 요청은 docs/public 안의 파일을 읽습니다.
+- 현재 구현은 / 요청을 index.html로 자동 연결하지 않으므로,
+  파일명까지 입력해야 합니다. /로 접속하면 404가 반환됩니다.
+
+5. 파일 업로드 확인 (별도 PowerShell 터미널에서 실행)
+- 예제는 기존 파일인 docs/public/index.html을 업로드합니다.
+- PUT 업로드:
+  curl.exe -i -T docs/public/index.html http://localhost:8080/upload-test.html
+  저장 위치: docs/upload/upload-test.html
+  새 파일은 201 Created, 기존 파일 덮어쓰기는 200 OK가 반환됩니다.
+- POST 업로드 (multipart/form-data):
+  curl.exe -i -F "file=@docs/public/index.html" http://localhost:8080/
+  저장 위치: docs/upload/index.html
+  성공하면 201 Created가 반환됩니다. 폼 필드 이름은 file이어야 합니다.
+- docs/upload 폴더는 업로드 시 자동 생성됩니다.
+- 같은 이름의 파일이 있으면 덮어씁니다.
+- 업로드 파일은 docs/upload에 저장되고 GET은 docs/public만 읽으므로,
+  업로드 결과는 docs/upload에서 직접 확인합니다.
+- 서버 포트를 바꿨다면 접속 주소의 포트도 함께 바꿉니다.
+
+6. 업로드 지연 및 로그 옵션
+  java -cp out MyWebServer --port 8080 --slowDown 1000
+
+- --slowDown 값의 단위는 밀리초이며 0 이상이어야 합니다.
+- 위 예시는 업로드 파일 쓰기 잠금을 획득한 뒤 저장 전에 1초 대기합니다.
+- 옵션을 지정하면 파일 쓰기 구간의 ENTER/EXIT 로그가 출력됩니다.
+- --slowDown 0으로 실행하면 추가 지연 없이 로그만 확인할 수 있습니다.
+
+7. 종료 및 문제 해결
+- 서버 실행 터미널에서 Ctrl+C를 누르면 종료됩니다.
+- "Address already in use"가 나오면 같은 포트를 사용하는 프로세스를
+  종료하거나 --port로 다른 포트를 지정합니다.
+- java 또는 javac를 찾을 수 없으면 JDK 설치 및 PATH 설정을 확인합니다.
+- 클래스를 찾을 수 없으면 컴파일 성공 여부와 -cp out 옵션을 확인합니다.
+- index.html 요청이 404이면 현재 작업 디렉터리가 PA1인지,
+  docs/public/index.html 파일이 있는지 확인합니다.
