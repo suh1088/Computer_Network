@@ -12,7 +12,7 @@ PA1 웹 서버 실행 방법 (Windows PowerShell 기준)
 
 2. 컴파일
   New-Item -ItemType Directory -Path out -Force | Out-Null
-  javac -encoding UTF-8 -d out src/MyWebServer.java src/http/HttpParser.java src/http/HttpRequest.java src/webserver/ClientHandler.java
+  javac -encoding UTF-8 -d out (Get-ChildItem src -Recurse -Filter *.java).FullName
 
 - 컴파일된 .class 파일은 out 폴더에 저장됩니다.
 - 소스 코드를 수정한 뒤에는 다시 컴파일합니다.
