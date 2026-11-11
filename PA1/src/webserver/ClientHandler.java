@@ -2,7 +2,6 @@ package webserver;
 
 import http.HttpParser;
 import http.HttpRequest;
-
 import java.io.OutputStream;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
